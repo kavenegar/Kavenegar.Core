@@ -1,20 +1,20 @@
-using Kavenegar.Core.Models.Enums;
+using Kavenegar.Models.Enums;
 
-namespace Kavenegar.Core.Exceptions
+namespace Kavenegar.Exceptions
 {
- public class ApiException : KavenegarException
- {
-	readonly MetaCode _result;
-	public ApiException(string message, int code)
-	 : base(message)
+	public class ApiException : KavenegarException
 	{
-	 _result = (MetaCode)code;
-	}
+		readonly MetaCode _result;
+		public ApiException(string message, int code)
+		 : base(message)
+		{
+			_result = (MetaCode)code;
+		}
 
-	public MetaCode Code
-	{
-	 get { return _result; }
-	}
+		public MetaCode Code
+		{
+			get { return _result; }
+		}
 
- }
+	}
 }
