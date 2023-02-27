@@ -88,10 +88,12 @@ namespace Kavenegar
         private int _returnCode = 200;
         private string _returnMessage = "";
         private const string Apipath = "{0}/{1}.{2}";
-        private const string BaseUrl = "http://api.kavenegar.com/v1";
-        public KavenegarApi(string apikey)
+        private readonly string BaseUrl;
+        public KavenegarApi(string apikey, string baseUrl = "http://api.kavenegar.com/v1")
         {
             _apikey = apikey;
+
+            BaseUrl = baseUrl;
 
             _client = new HttpClient
             {
