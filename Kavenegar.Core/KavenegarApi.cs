@@ -88,7 +88,7 @@ namespace Kavenegar
         private int _returnCode = 200;
         private string _returnMessage = "";
         private const string Apipath = "{0}/{1}.{2}";
-        private const string BaseUrl = "https://api.kavenegar.com/v1";
+        public static string BaseUrl = "https://api.kavenegar.com/v1";
         public KavenegarApi(string apikey)
         {
             _apikey = apikey;
